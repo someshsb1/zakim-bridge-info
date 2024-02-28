@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonard P. Zakim Bridge Infographic</title>
+    <style>
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 47, 82);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.infographic-container {
+    text-align: center;
+    flex-basis: 48%; 
+    margin-bottom: 20px; 
+}
+
+.infographic-container:last-child {
+    text-align: right;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100vh; 
+    height: auto;
+}
+
+#fun-facts-image {
+    max-width: 100%;
+    max-height: 50vh;
+    height: auto;
+    display: none;
+}
+
+#fun-facts-button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+    <script>
+        function toggleFunFacts() {
+            var funFactsImage = document.getElementById('fun-facts-image');
+            if (funFactsImage.style.display === 'none') {
+                funFactsImage.style.display = 'block';
+            } else {
+                funFactsImage.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Leonard P. Zakim Bridge Infographic</h1>
+    <div class="container">
+        <div class="infographic-container">
+            <div class="infographic">
+                <img src="images/1.png" alt="Leonard P. Zakim Bridge Infographic">
+            </div>
+        </div>
+        <div class="infographic-container">
+            <button id="fun-facts-button" onclick="toggleFunFacts()">Fun Facts about Bridge</button>
+            <div id="fun-facts-image">
+                <img src="images/2.png" alt="Fun Facts about the Leonard P. Zakim Bridge">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
